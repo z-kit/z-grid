@@ -1,0 +1,152 @@
+{
+  "name": "z-grid",
+  "version": "1.0.0",
+  "description": "A 12-column grid system for your web application",
+  "main": "dist/index.js",
+  "minified:main": "dist/index.min.js",
+  "jsnext:main": "dist/module.js",
+  "module": "dist/module.js",
+  "scripts": {
+    "lint": "eslint webpack.config.babel.js .storybook src stories test/regression test/unit/suite && stylelint src/style.css",
+    "test": "npm run lint && npm run unit-test && npm run regression-test",
+    "unit-test": "webpack --config test/unit/webpack.config.babel.js && ava test/unit/testBundle.js",
+    "regression-test": "npm run test-build && node test/regression/nightwatch/run.js --config test/regression/nightwatch/local.conf.js --env chrome",
+    "build-module": "mkdirp dist && babel --source-maps -o dist/module.js src/component.js",
+    "package": "webpack",
+    "min-package": "cross-env MIN=true webpack -p",
+    "test-build": "npm run package && npm run build-storybook",
+    "release-build": "npm run test-build && npm run min-package && npm run build-module",
+    "build": "npm run release-build",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "prepublish": "npm run build"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "ignore": [
+      "src/webcomponent"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "airbnb"
+    ],
+    "rules": {
+      "new-cap": "off",
+      "import/no-extraneous-dependencies": "off",
+      "react/prop-types": "off",
+      "react/jsx-filename-extension": "off",
+      "global-require": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": ".storybook/webpack.config.js"
+        }
+      }
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-at-rules-variables": {},
+      "postcss-for": {},
+      "postcss-custom-properties": {},
+      "postcss-calc": {},
+      "autoprefixer": {
+        "browsers": "last 2 versions"
+      },
+      "cssnano": {
+        "discardUnused": false
+      }
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-selector-bem-pattern"
+    ],
+    "rules": {
+      "comment-whitespace-inside": null,
+      "plugin/selector-bem-pattern": {
+        "componentName": "[A-Z]+",
+        "componentSelectors": {
+          "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+          "combined": "^\\.combined-{componentName}-[a-z]+$"
+        },
+        "utilitySelectors": "^\\.util-[a-z]+$"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z-kit/z-grid.git"
+  },
+  "keywords": [
+    "z-kit",
+    "component",
+    "browser",
+    "hello",
+    "template"
+  ],
+  "author": "Matheus Kautzmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/z-kit/z-grid/issues"
+  },
+  "homepage": "https://github.com/z-kit/z-grid",
+  "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.26.0",
+    "eslint": "^3.8.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.3.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "finalhandler": "^0.5.1",
+    "jsx-test-helpers": "^1.1.0",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "nightwatch": "^0.9.12",
+    "null-loader": "^0.1.1",
+    "postcss-at-rules-variables": "^0.0.26",
+    "postcss-calc": "^5.3.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-for": "^2.1.1",
+    "postcss-loader": "^1.2.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "rimraf": "^2.5.4",
+    "selenium-standalone": "^5.9.0",
+    "serve-static": "^1.11.1",
+    "style-loader": "^0.13.1",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0",
+    "stylelint-selector-bem-pattern": "^1.0.0",
+    "webpack": "v2.1.0-beta.27",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
