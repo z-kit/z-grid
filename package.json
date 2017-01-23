@@ -101,6 +101,13 @@
     "hello",
     "template"
   ],
+  "greenkeeper": {
+    "ignore": [
+      "eslint-config-airbnb",
+      "eslint-plugin-import",
+      "eslint-plugin-jsx-a11y"
+    ]
+  },
   "author": "Matheus Kautzmann",
   "license": "MIT",
   "bugs": {
