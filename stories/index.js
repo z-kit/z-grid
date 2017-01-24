@@ -140,6 +140,24 @@ storiesOf('CSS component', module)
     </div>
   ));
 
+storiesOf('CSS component', module)
+  .add('resizing example', () => (
+    <div className="z-grid z-grid--gutter">
+      <div className="z-grid__col z-grid__col--12-12 z-grid__col--sm-6-12 z-grid__col--lg-3-12">
+        <h1 style={style}>First</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--12-12 z-grid__col--sm-6-12 z-grid__col--lg-3-12">
+        <h1 style={style}>Second</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--12-12 z-grid__col--sm-6-12 z-grid__col--lg-3-12">
+        <h1 style={style}>Third</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--12-12 z-grid__col--sm-6-12 z-grid__col--lg-3-12">
+        <h1 style={style}>Fourth</h1>
+      </div>
+    </div>
+  ));
+
 storiesOf('Stateless functional component', module)
   .add('default', () => (
     <Grid>
@@ -237,6 +255,24 @@ storiesOf('Stateless functional component', module)
         <h1 style={style}>Third</h1>
       </Column>
       <Column fill={3}>
+        <h1 style={style}>Fourth</h1>
+      </Column>
+    </Grid>
+  ));
+
+storiesOf('Stateless functional component', module)
+  .add('resizing example', () => (
+    <Grid gutter>
+      <Column fill={12} sm={6} lg={3}>
+        <h1 style={style}>First</h1>
+      </Column>
+      <Column fill={12} sm={6} lg={3}>
+        <h1 style={style}>Second</h1>
+      </Column>
+      <Column fill={12} sm={6} lg={3}>
+        <h1 style={style}>Third</h1>
+      </Column>
+      <Column fill={12} sm={6} lg={3}>
         <h1 style={style}>Fourth</h1>
       </Column>
     </Grid>
