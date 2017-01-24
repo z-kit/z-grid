@@ -58,7 +58,7 @@
 /* 568px when root font-size is 16px */
 @media all and (min-width: 35.5rem) {
   @for $i from 1 to var(--number-of-columns) {
-    .z-grid__col--sm--$(i)-12 {
+    .z-grid__col--sm-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
     }
@@ -68,7 +68,7 @@
 /* 768px when root font-size is 16px */
 @media all and (min-width: 48rem) {
   @for $i from 1 to var(--number-of-columns) {
-    .z-grid__col--md--$(i)-12 {
+    .z-grid__col--md-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
     }
@@ -78,7 +78,7 @@
 /* 1024px when root font-size is 16px */
 @media all and (min-width: 64rem) {
   @for $i from 1 to var(--number-of-columns) {
-    .z-grid__col--lg--$(i)-12 {
+    .z-grid__col--lg-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
     }
@@ -88,7 +88,7 @@
 /* 1280px when root font-size is 16px */
 @media all and (min-width: 80rem) {
   @for $i from 1 to var(--number-of-columns) {
-    .z-grid__col--xl--$(i)-12 {
+    .z-grid__col--xl-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
     }
