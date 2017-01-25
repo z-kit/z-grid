@@ -142,7 +142,7 @@ storiesOf('CSS component', module)
 
 storiesOf('CSS component', module)
   .add('resizing example', () => (
-    <div className="z-grid z-grid--gutter">
+    <div className="z-grid">
       <div className="z-grid__col z-grid__col--12-12 z-grid__col--sm-6-12 z-grid__col--lg-3-12">
         <h1 style={style}>First</h1>
       </div>
@@ -262,7 +262,7 @@ storiesOf('Stateless functional component', module)
 
 storiesOf('Stateless functional component', module)
   .add('resizing example', () => (
-    <Grid gutter>
+    <Grid>
       <Column fill={12} sm={6} lg={3}>
         <h1 style={style}>First</h1>
       </Column>
