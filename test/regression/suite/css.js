@@ -84,18 +84,6 @@ module.exports = {
     browser
       .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=resizing%20example')
       .waitForElementPresent('.z-grid', 1000)
-      .resizeWindow(1024, 768)
-      .getLocation('.z-grid', (gridLocation) => {
-        const gridX = gridLocation.value.x;
-        browser.getElementSize('.z-grid', (gridSize) => {
-          const gridWidth = gridSize.value.width;
-          const expectedX = Math.floor((gridWidth / 4) + gridX);
-          browser.getLocation('.z-grid__col:nth-child(2)', (columnLocation) => {
-            const columnX = Math.floor(columnLocation.value.x);
-            browser.assert.equal(expectedX, columnX);
-          });
-        });
-      })
       .resizeWindow(600, 768)
       .getLocation('.z-grid', (gridLocation) => {
         const gridX = gridLocation.value.x;
