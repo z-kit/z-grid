@@ -53,6 +53,7 @@ module.exports = {
   },
   fit: (browser) => {
     browser
+      .resizeWindow(640, 480)
       .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=fit')
       .waitForElementPresent('.z-grid', 1000)
       .getElementSize('.z-grid', (gridSize) => {
