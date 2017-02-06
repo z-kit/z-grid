@@ -1,14 +1,14 @@
 module.exports = {
   default: (browser) => {
     browser
-      .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=default')
+      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=default')
       .waitForElementPresent('.z-grid', 1000)
       .assert.containsText('.z-grid__col--12-12 > h1', '12-12')
       .end();
   },
   gutter: (browser) => {
     browser
-      .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=gutters')
+      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=gutters')
       .waitForElementPresent('.z-grid', 1000)
       .getLocation('.z-grid', (gridLocation) => {
         browser.assert.equal(gridLocation.value.x, -8);
@@ -17,7 +17,7 @@ module.exports = {
   },
   reverse: (browser) => {
     browser
-      .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=reverse%20grid')
+      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=reverse%20grid')
       .waitForElementPresent('.z-grid', 1000)
       .getLocation('.z-grid', (gridLocation) => {
         const gridX = gridLocation.value.x;
@@ -36,7 +36,7 @@ module.exports = {
   },
   center: (browser) => {
     browser
-      .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=center%20grid')
+      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=center%20grid')
       .waitForElementPresent('.z-grid', 1000)
       .getLocation('.z-grid', (gridLocation) => {
         const gridX = gridLocation.value.x;
@@ -54,7 +54,7 @@ module.exports = {
   fit: (browser) => {
     browser
       .resizeWindow(640, 480)
-      .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=fit')
+      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=fit')
       .waitForElementPresent('.z-grid', 1000)
       .getElementSize('.z-grid', (gridSize) => {
         const gridWidth = gridSize.value.width;
@@ -68,7 +68,7 @@ module.exports = {
   },
   important: (browser) => {
     browser
-      .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=important%20column%20example')
+      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=important%20column%20example')
       .waitForElementPresent('.z-grid', 1000)
       .getLocation('.z-grid', (gridLocation) => {
         const gridX = gridLocation.value.x;
@@ -82,7 +82,7 @@ module.exports = {
   },
   resizing: (browser) => {
     browser
-      .url('http://localhost:3000/iframe.html?selectedKind=CSS%20component&selectedStory=resizing%20example')
+      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=resizing%20example')
       .waitForElementPresent('.z-grid', 1000)
       .resizeWindow(600, 768)
       .getLocation('.z-grid', (gridLocation) => {

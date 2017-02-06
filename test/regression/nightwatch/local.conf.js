@@ -14,7 +14,7 @@ module.exports = {
   output_folder: './test/regression/nightwatch/reports',
 
   selenium: {
-    start_process: false,
+    start_process: true,
     server_path: seleniumServerPath,
     log_path: '',
     port: 4444,
