@@ -132,7 +132,7 @@
     "eslint-plugin-react": "^6.3.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "file-loader": "^0.10.0",
-    "fkill-cli": "^3.3.0",
+    "fkill-cli": "3.3.0",
     "finalhandler": "^0.5.1",
     "jsx-test-helpers": "^1.1.0",
     "mkdirp": "^0.5.1",
