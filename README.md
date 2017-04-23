@@ -1,5 +1,7 @@
 # <a name="z-grid"></a> z-grid
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/z-kit/z-grid.svg)](https://greenkeeper.io/)
+
 [![Build]](https://travis-ci.org/z-kit/z-grid) [![SemVer]](http://semver.org/) [![License]](LICENSE)
 
 A 12-column grid system for your web application. The package is intended to be used in a web page.
