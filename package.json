@@ -130,7 +130,7 @@
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react": "^7.0.1",
     "extract-text-webpack-plugin": "2.1.0",
     "fkill-cli": "^3.4.0",
     "jsx-test-helpers": "^1.1.0",
