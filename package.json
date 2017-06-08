@@ -131,7 +131,7 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.10.0",
-    "extract-text-webpack-plugin": "2.1.0",
+    "extract-text-webpack-plugin": "2.1.1",
     "fkill-cli": "^3.4.0",
     "jsx-test-helpers": "^1.1.0",
     "mkdirp": "^0.5.1",
