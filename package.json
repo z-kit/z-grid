@@ -133,7 +133,7 @@
     "eslint-plugin-react": "^6.10.0",
     "extract-text-webpack-plugin": "2.1.0",
     "fkill-cli": "^3.4.0",
-    "jsx-test-helpers": "^1.1.0",
+    "jsx-test-helpers": "^2.0.0",
     "mkdirp": "^0.5.1",
     "nightmare": "^2.10.0",
     "null-loader": "^0.1.1",
