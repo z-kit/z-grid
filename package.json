@@ -132,7 +132,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.10.0",
     "extract-text-webpack-plugin": "2.1.0",
-    "fkill-cli": "^3.4.0",
+    "fkill-cli": "^4.0.0",
     "jsx-test-helpers": "^1.1.0",
     "mkdirp": "^0.5.1",
     "nightmare": "^2.10.0",
