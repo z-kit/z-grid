@@ -135,7 +135,7 @@
     "fkill-cli": "^3.4.0",
     "jsx-test-helpers": "^1.1.0",
     "mkdirp": "^0.5.1",
-    "nightmare": "^2.10.0",
+    "nightmare": "^3.0.0",
     "null-loader": "^0.1.1",
     "postcss-at-rules-variables": "^0.0.27",
     "postcss-calc": "^5.3.1",
