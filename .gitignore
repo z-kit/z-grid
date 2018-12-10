@@ -8,5 +8,4 @@ test/unit/testBundle.js.map
 test/regression/nightwatch/reports
 test/regression/selenium/bin
 npm-debug.log
-yarn-error.log
 selenium-debug.log

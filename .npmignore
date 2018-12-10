@@ -11,5 +11,3 @@ stories
 storybook-static
 test
 webpack.config.babel.js
-yarn-error.log
-yarn.lock
