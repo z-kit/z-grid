@@ -1,4 +1,4 @@
-import { test } from 'ava';
+import test from 'ava';
 import Nightmare from 'nightmare';
 
 test('SFC component - default', (t) => {
@@ -92,7 +92,6 @@ test('SFC component - important column example', (t) => {
     .wait('.z-grid')
     .evaluate(() => {
       document.body.style.margin = '0';
-      return;
     })
     .evaluate(() => {
       const column = document.querySelector('.z-grid__col--important');
@@ -126,7 +125,6 @@ test('SFC component - resizing example', (t) => {
     .wait('.z-grid')
     .evaluate(() => {
       document.body.style.margin = '0';
-      return;
     })
     .evaluate(() => {
       const column = document.querySelector('.z-grid__col:nth-child(2)');

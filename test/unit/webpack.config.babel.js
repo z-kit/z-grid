@@ -2,6 +2,7 @@ import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 
 export default {
+  mode: 'none',
   entry: {
     js: [path.resolve(__dirname, './suite/index.js')],
   },
@@ -17,12 +18,12 @@ export default {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loaders: ['null-loader'],
+        use: ['null-loader'],
       },
     ],
   },
