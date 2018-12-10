@@ -1,12 +1,12 @@
-// Webpack config to serve the component with bundled styles
+const path = require('path');
 
 module.exports = {
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loader: 'style-loader!css-loader!postcss-loader',
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        include: path.resolve(__dirname, '../src'),
       },
     ],
   },
