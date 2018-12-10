@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 import { ZGrid, ZColumn } from '../src/component';
 
 const Grid = ZGrid(React.createElement);

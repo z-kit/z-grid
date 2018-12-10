@@ -35,7 +35,9 @@ const classes = {
       lg[i] = styles[`z-grid__col--lg-${i}-12`] || `z-grid__col--lg-${i}-12`;
       xl[i] = styles[`z-grid__col--xl-${i}-12`] || `z-grid__col--xl-${i}-12`;
     }
-    return { fill, sm, md, lg, xl };
+    return {
+      fill, sm, md, lg, xl,
+    };
   }()),
 };
 

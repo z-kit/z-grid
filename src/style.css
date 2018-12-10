@@ -29,13 +29,6 @@
 .z-grid--cross-center { align-items: center; }
 .z-grid--stretch { align-items: stretch; }
 
-/* Gutters */
-.z-grid--gutter {
-  margin-left: calc(-1 * var(--gutter-size));
-  margin-bottom: calc(-1 * var(--gutter-size));
-}
-.z-grid--gutter > .z-grid__col { padding: 0 0 var(--gutter-size) var(--gutter-size); }
-
 /* Column properties */
 .z-grid__col {
   box-sizing: border-box;
@@ -46,6 +39,13 @@
   flex-grow: 0;
   overflow: hidden;
 }
+
+/* Gutters */
+.z-grid--gutter {
+  margin-left: calc(-1 * var(--gutter-size));
+  margin-bottom: calc(-1 * var(--gutter-size));
+}
+.z-grid--gutter > .z-grid__col { padding: 0 0 var(--gutter-size) var(--gutter-size); }
 
 /* Column modifiers */
 @for $i from 1 to var(--number-of-columns) {
@@ -96,7 +96,11 @@
 }
 
 /* Extra column modifiers */
-.z-grid__col--fit { flex: 1 0 calc(100% / var(--number-of-columns)); }
+.z-grid__col--fit {
+  flex-grow: 1;
+  flex-basis: calc(100% / var(--number-of-columns));
+}
+
 .z-grid__col--center { align-self: center; }
 .z-grid__col--end { align-self: flex-end; }
 .z-grid__col--important { order: -1; }
