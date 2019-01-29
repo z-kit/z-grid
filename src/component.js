@@ -52,7 +52,7 @@ export function ZGrid(e) {
     if (props.stretch) modifiers.push(classes.gridStretch);
     if (props.gutter) modifiers.push(classes.gridGutter);
     const className = block.concat(modifiers).join(' ');
-    const style = props.style || null;
+    const style = props.style || undefined;
     return e(props.element || 'div', { className, style }, props.children);
   };
 }
@@ -71,7 +71,7 @@ export function ZColumn(e) {
     if (props.end) modifiers.push(classes.columnEnd);
     if (props.important) modifiers.push(classes.columnImportant);
     const className = block.concat(modifiers).join(' ');
-    const style = props.style || null;
+    const style = props.style || undefined;
     return e(props.element || 'div', { className, style }, props.children);
   };
 }
