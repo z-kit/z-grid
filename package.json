@@ -1,6 +1,6 @@
 {
   "name": "z-grid",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A 12-column grid system for your web application",
   "main": "dist/index.js",
   "minified:main": "dist/index.min.js",
