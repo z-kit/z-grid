@@ -83,6 +83,15 @@ test('Grid stretch', (t) => {
   return t.deepEqual(actual, expected, msg);
 });
 
+test('Grid style passthrough', (t) => {
+  const msg = 'should render style content';
+  const actual = shallow(<Grid style={{ width: '100px' }}>Hello!</Grid>).html();
+  const expected = shallow(
+    <div className="z-grid" style={{ width: '100px' }}>Hello!</div>,
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
 test('Column component', (t) => {
   const msg = 'should render';
   const actual = shallow(<Column>Hello!</Column>).html();
@@ -184,6 +193,15 @@ test('Column important', (t) => {
   const actual = shallow(<Column important>Hello!</Column>).html();
   const expected = shallow(
     <div className="z-grid__col z-grid__col--important">Hello!</div>,
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
+test('Column style passthrough', (t) => {
+  const msg = 'should render style content';
+  const actual = shallow(<Column style={{ width: '100px' }}>Hello!</Column>).html();
+  const expected = shallow(
+    <div className="z-grid__col" style={{ width: '100px' }}>Hello!</div>,
   ).html();
   return t.deepEqual(actual, expected, msg);
 });

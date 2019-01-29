@@ -52,7 +52,8 @@ export function ZGrid(e) {
     if (props.stretch) modifiers.push(classes.gridStretch);
     if (props.gutter) modifiers.push(classes.gridGutter);
     const className = block.concat(modifiers).join(' ');
-    return e(props.element || 'div', { className }, props.children);
+    const style = props.style || null;
+    return e(props.element || 'div', { className, style }, props.children);
   };
 }
 
@@ -70,7 +71,8 @@ export function ZColumn(e) {
     if (props.end) modifiers.push(classes.columnEnd);
     if (props.important) modifiers.push(classes.columnImportant);
     const className = block.concat(modifiers).join(' ');
-    return e(props.element || 'div', { className }, props.children);
+    const style = props.style || null;
+    return e(props.element || 'div', { className, style }, props.children);
   };
 }
 
