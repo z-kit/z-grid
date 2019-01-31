@@ -37,7 +37,6 @@
   position: relative;
   flex-shrink: 0;
   flex-grow: 0;
-  overflow: hidden;
 }
 
 /* Gutters */
