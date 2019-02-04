@@ -52,6 +52,7 @@
   .z-grid__col--$(i)-12 {
     flex-basis: calc(100% / (var(--number-of-columns) / $i));
     max-width: calc(100% / (var(--number-of-columns) / $i));
+    width: calc(100% / (var(--number-of-columns) / $i));
   }
 }
 
@@ -61,6 +62,7 @@
     .z-grid__col--sm-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
+      width: calc(100% / (var(--number-of-columns) / $i));
     }
   }
 }
@@ -71,6 +73,7 @@
     .z-grid__col--md-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
+      width: calc(100% / (var(--number-of-columns) / $i));
     }
   }
 }
@@ -81,6 +84,7 @@
     .z-grid__col--lg-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
+      width: calc(100% / (var(--number-of-columns) / $i));
     }
   }
 }
@@ -91,6 +95,7 @@
     .z-grid__col--xl-$(i)-12 {
       flex-basis: calc(100% / (var(--number-of-columns) / $i));
       max-width: calc(100% / (var(--number-of-columns) / $i));
+      width: calc(100% / (var(--number-of-columns) / $i));
     }
   }
 }
