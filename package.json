@@ -88,10 +88,12 @@
     "plugins": {
       "postcss-at-rules-variables": {},
       "postcss-for": {},
-      "postcss-custom-properties": {},
+      "postcss-custom-properties": {
+        "preserve": false
+      },
       "postcss-calc": {},
       "autoprefixer": {
-        "browsers": "last 2 versions"
+        "overrideBrowserslist": "last 2 versions"
       },
       "cssnano": {
         "discardUnused": false
