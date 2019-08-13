@@ -29,11 +29,38 @@ test('Grid custom element', (t) => {
   return t.deepEqual(actual, expected, msg);
 });
 
+test('Grid half gutters', (t) => {
+  const msg = 'should render';
+  const actual = shallow(<Grid gutter="half">Hello!</Grid>).html();
+  const expected = shallow(
+    <div className="z-grid z-grid--half-gutter">Hello!</div>,
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
 test('Grid gutters', (t) => {
   const msg = 'should render';
   const actual = shallow(<Grid gutter>Hello!</Grid>).html();
   const expected = shallow(
     <div className="z-grid z-grid--gutter">Hello!</div>,
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
+test('Grid larger gutters', (t) => {
+  const msg = 'should render';
+  const actual = shallow(<Grid gutter="larger">Hello!</Grid>).html();
+  const expected = shallow(
+    <div className="z-grid z-grid--larger-gutter">Hello!</div>,
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
+test('Grid double gutters', (t) => {
+  const msg = 'should render';
+  const actual = shallow(<Grid gutter="double">Hello!</Grid>).html();
+  const expected = shallow(
+    <div className="z-grid z-grid--double-gutter">Hello!</div>,
   ).html();
   return t.deepEqual(actual, expected, msg);
 });
@@ -202,6 +229,50 @@ test('Column style passthrough', (t) => {
   const actual = shallow(<Column style={{ width: '100px' }}>Hello!</Column>).html();
   const expected = shallow(
     <div className="z-grid__col" style={{ width: '100px' }}>Hello!</div>,
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
+test('Responsive fit columns', (t) => {
+  const msg = 'should render fit columns for different sizes';
+  const actual = shallow(
+    <Grid>
+      <Column fit="sm">SM</Column>
+      <Column fit="md">MD</Column>
+      <Column fit="lg">LG</Column>
+      <Column fit="xl">XL</Column>
+    </Grid>,
+  ).html();
+  const expected = shallow(
+    <div className="z-grid">
+      <div className="z-grid__col z-grid__col--sm-fit">SM</div>
+      <div className="z-grid__col z-grid__col--md-fit">MD</div>
+      <div className="z-grid__col z-grid__col--lg-fit">LG</div>
+      <div className="z-grid__col z-grid__col--xl-fit">XL</div>
+    </div>,
+  ).html();
+  return t.deepEqual(actual, expected, msg);
+});
+
+test('Invisible columns', (t) => {
+  const msg = 'should render invisible columns';
+  const actual = shallow(
+    <Grid>
+      <Column invisible>My invisible column</Column>
+      <Column invisible="sm">SM</Column>
+      <Column invisible="md">MD</Column>
+      <Column invisible="lg">LG</Column>
+      <Column invisible="xl">XL</Column>
+    </Grid>,
+  ).html();
+  const expected = shallow(
+    <div className="z-grid">
+      <div className="z-grid__col z-grid__col--invisible">My invisible column</div>
+      <div className="z-grid__col z-grid__col--sm-invisible">SM</div>
+      <div className="z-grid__col z-grid__col--md-invisible">MD</div>
+      <div className="z-grid__col z-grid__col--lg-invisible">LG</div>
+      <div className="z-grid__col z-grid__col--xl-invisible">XL</div>
+    </div>,
   ).html();
   return t.deepEqual(actual, expected, msg);
 });
