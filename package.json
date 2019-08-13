@@ -75,6 +75,7 @@
     ],
     "rules": {
       "new-cap": "off",
+      "arrow-parens": "off",
       "import/no-extraneous-dependencies": "off",
       "import/no-unresolved": "off",
       "import/no-self-import": "off",
