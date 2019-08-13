@@ -8,7 +8,7 @@
   "module": "dist/module.js",
   "scripts": {
     "ava:bundle": "ava test/unit/testBundle.js",
-    "ava:regression": "ava test/regression/suite",
+    "ava:regression": "ava test/regression/suite/*",
     "babel:module": "babel --source-maps -o dist/module.js src/component.js",
     "build:module": "run-s create-output-dir babel:module",
     "build:test": "webpack --config test/unit/webpack.config.babel.js",
@@ -30,9 +30,9 @@
     "wait-storybook-server": "wait-on http-get://localhost:6006"
   },
   "ava": {
+    "compileEnhancements": false,
     "require": [
-      "@babel/register",
-      "@babel/polyfill"
+      "@babel/register"
     ],
     "babel": {
       "testOptions": {
