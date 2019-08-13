@@ -16,7 +16,12 @@ const classes = {
   gridCenter: styles['z-grid--center'] || 'z-grid--center',
   gridCrossCenter: styles['z-grid--cross-center'] || 'z-grid--cross-center',
   gridStretch: styles['z-grid--stretch'] || 'z-grid--stretch',
-  gridGutter: styles['z-grid--gutter'] || 'z-grid--gutter',
+  gridGutter: {
+    half: styles['z-grid--half-gutter'] || 'z-grid--half-gutter',
+    gutter: styles['z-grid--gutter'] || 'z-grid--gutter',
+    larger: styles['z-grid--larger-gutter'] || 'z-grid--larger-gutter',
+    double: styles['z-grid--double-gutter'] || 'z-grid--double-gutter',
+  },
   column: styles['z-grid__col'] || 'z-grid__col',
   fit: {
     fit: styles['z-grid__col--fit'] || 'z-grid__col--fit',
@@ -63,7 +68,8 @@ export function ZGrid(e) {
     if (props.center) modifiers.push(classes.gridCenter);
     if (props.crossCenter) modifiers.push(classes.gridCrossCenter);
     if (props.stretch) modifiers.push(classes.gridStretch);
-    if (props.gutter) modifiers.push(classes.gridGutter);
+    if (props.gutter === true) modifiers.push(classes.gridGutter.gutter);
+    if (typeof props.gutter === 'string') modifiers.push(classes.gridGutter[props.gutter]);
     const className = block.concat(modifiers).join(' ');
     const elProps = { className };
     if (props.style) elProps.style = props.style;

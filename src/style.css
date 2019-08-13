@@ -42,10 +42,54 @@
 }
 
 /* Gutters */
+.z-grid--half-gutter {
+  margin-left: calc(-1 * var(--gutter-size) * 0.5);
+  margin-bottom: calc(-1 * var(--gutter-size) * 0.5);
+}
+
 .z-grid--gutter {
   margin-left: calc(-1 * var(--gutter-size));
   margin-bottom: calc(-1 * var(--gutter-size));
 }
+
+.z-grid--larger--gutter {
+  margin-left: calc(-1 * var(--gutter-size) * 1.5);
+  margin-bottom: calc(-1 * var(--gutter-size) * 1.5);
+}
+
+.z-grid--double-gutter {
+  margin-left: calc(-1 * var(--gutter-size) * 2);
+  margin-bottom: calc(-1 * var(--gutter-size) * 2);
+}
+
+.z-grid--half-gutter > .z-grid__col {
+  padding:
+    0
+    0
+    calc(var(--gutter-size) * 0.5)
+    calc(var(--gutter-size) * 0.5);
+}
+
+.z-grid--gutter > .z-grid__col {
+  padding: 0 0 var(--gutter-size) var(--gutter-size);
+}
+
+.z-grid--larger-gutter > .z-grid__col {
+  padding:
+    0
+    0
+    calc(var(--gutter-size) * 1.5)
+    calc(var(--gutter-size) * 1.5);
+}
+
+.z-grid--double-gutter > .z-grid__col {
+  padding:
+    0
+    0
+    calc(var(--gutter-size) * 2)
+    calc(var(--gutter-size) * 2);
+}
+
 /* Column fit the remaining space */
 .z-grid__col--fit { flex-grow: 1; }
 
