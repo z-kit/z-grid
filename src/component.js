@@ -18,7 +18,13 @@ const classes = {
   gridStretch: styles['z-grid--stretch'] || 'z-grid--stretch',
   gridGutter: styles['z-grid--gutter'] || 'z-grid--gutter',
   column: styles['z-grid__col'] || 'z-grid__col',
-  columnFit: styles['z-grid__col--fit'] || 'z-grid__col--fit',
+  fit: {
+    fit: styles['z-grid__col--fit'] || 'z-grid__col--fit',
+    sm: styles['z-grid__col--sm-fit'] || 'z-grid__col--sm-fit',
+    md: styles['z-grid__col--md-fit'] || 'z-grid__col--md-fit',
+    lg: styles['z-grid__col--lg-fit'] || 'z-grid__col--lg-fit',
+    xl: styles['z-grid__col--xl-fit'] || 'z-grid__col--xl-fit',
+  },
   columnCenter: styles['z-grid__col--center'] || 'z-grid__col--center',
   columnEnd: styles['z-grid__col--end'] || 'z-grid__col--end',
   columnImportant: styles['z-grid__col--important'] || 'z-grid__col--important',
@@ -67,7 +73,8 @@ export function ZColumn(e) {
     if (props.md) modifiers.push(classes.columns.md[props.md]);
     if (props.lg) modifiers.push(classes.columns.lg[props.lg]);
     if (props.xl) modifiers.push(classes.columns.xl[props.xl]);
-    if (props.fit) modifiers.push(classes.columnFit);
+    if (props.fit === true) modifiers.push(classes.fit.fit);
+    if (typeof props.fit === 'string') modifiers.push(classes.fit[props.fit]);
     if (props.center) modifiers.push(classes.columnCenter);
     if (props.end) modifiers.push(classes.columnEnd);
     if (props.important) modifiers.push(classes.columnImportant);
