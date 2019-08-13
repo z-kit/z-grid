@@ -22,7 +22,7 @@ const classes = {
   columnCenter: styles['z-grid__col--center'] || 'z-grid__col--center',
   columnEnd: styles['z-grid__col--end'] || 'z-grid__col--end',
   columnImportant: styles['z-grid__col--important'] || 'z-grid__col--important',
-  columns: (function generateColumns() {
+  columns: (() => {
     const fill = [];
     const sm = [];
     const md = [];
@@ -38,7 +38,7 @@ const classes = {
     return {
       fill, sm, md, lg, xl,
     };
-  }()),
+  })(),
 };
 
 export function ZGrid(e) {
