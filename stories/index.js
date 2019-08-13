@@ -39,6 +39,30 @@ storiesOf('CSS component', module)
   ));
 
 storiesOf('CSS component', module)
+  .add('half gutters', () => (
+    <div className="z-grid z-grid--half-gutter">
+      <div className="z-grid__col z-grid__col--12-12">
+        <h1 style={style}>12-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--6-12">
+        <h1 style={style}>6-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--6-12">
+        <h1 style={style}>6-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--4-12">
+        <h1 style={style}>4-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--4-12">
+        <h1 style={style}>4-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--4-12">
+        <h1 style={style}>4-12</h1>
+      </div>
+    </div>
+  ));
+
+storiesOf('CSS component', module)
   .add('gutters', () => (
     <div className="z-grid z-grid--gutter">
       <div className="z-grid__col z-grid__col--12-12">
@@ -154,6 +178,54 @@ storiesOf('CSS component', module)
       </div>
       <div className="z-grid__col z-grid__col--12-12 z-grid__col--sm-6-12 z-grid__col--lg-3-12">
         <h1 style={style}>Fourth</h1>
+      </div>
+    </div>
+  ));
+
+storiesOf('CSS component', module)
+  .add('fit sizes', () => (
+    <div className="z-grid">
+      <div className="z-grid__col z-grid__col--sm-fit">
+        <h1 style={style}>SM</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--md-fit">
+        <h1 style={style}>MD</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--lg-fit">
+        <h1 style={style}>LG</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--xl-fit">
+        <h1 style={style}>XL</h1>
+      </div>
+    </div>
+  ));
+
+storiesOf('CSS component', module)
+  .add('invisible column', () => (
+    <div className="z-grid">
+      <div className="z-grid__col z-grid__col--invisible">
+        <h1 style={style}>Invisible column</h1>
+      </div>
+      <div className="z-grid__col">
+        <h1 style={style}>Visible column</h1>
+      </div>
+    </div>
+  ));
+
+storiesOf('CSS component', module)
+  .add('invisibles', () => (
+    <div className="z-grid">
+      <div className="z-grid__col z-grid__col--sm-invisible">
+        <h1 style={style}>SM</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--md-invisible">
+        <h1 style={style}>MD</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--lg-invisible">
+        <h1 style={style}>LG</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--xl-invisible">
+        <h1 style={style}>XL</h1>
       </div>
     </div>
   ));
@@ -274,6 +346,54 @@ storiesOf('Stateless functional component', module)
       </Column>
       <Column fill={12} sm={6} lg={3}>
         <h1 style={style}>Fourth</h1>
+      </Column>
+    </Grid>
+  ));
+
+storiesOf('Stateless functional component', module)
+  .add('fit sizes', () => (
+    <Grid>
+      <Column fit="sm">
+        <h1 style={style}>SM</h1>
+      </Column>
+      <Column fit="md">
+        <h1 style={style}>MD</h1>
+      </Column>
+      <Column fit="lg">
+        <h1 style={style}>LG</h1>
+      </Column>
+      <Column fit="xl">
+        <h1 style={style}>XL</h1>
+      </Column>
+    </Grid>
+  ));
+
+storiesOf('Stateless functional component', module)
+  .add('invisible column', () => (
+    <Grid>
+      <Column invisible>
+        <h1 style={style}>Invisible</h1>
+      </Column>
+      <Column>
+        <h1 style={style}>Visible</h1>
+      </Column>
+    </Grid>
+  ));
+
+storiesOf('Stateless functional component', module)
+  .add('invisibles', () => (
+    <Grid>
+      <Column invisible="sm">
+        <h1 style={style}>SM</h1>
+      </Column>
+      <Column invisible="md">
+        <h1 style={style}>MD</h1>
+      </Column>
+      <Column invisible="lg">
+        <h1 style={style}>LG</h1>
+      </Column>
+      <Column invisible="xl">
+        <h1 style={style}>XL</h1>
       </Column>
     </Grid>
   ));
