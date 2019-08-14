@@ -87,8 +87,32 @@ storiesOf('CSS component', module)
   ));
 
 storiesOf('CSS component', module)
-  .add('gutters', () => (
-    <div className="z-grid z-grid--gutter">
+  .add('larger gutters', () => (
+    <div className="z-grid z-grid--larger-gutter">
+      <div className="z-grid__col z-grid__col--12-12">
+        <h1 style={style}>12-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--6-12">
+        <h1 style={style}>6-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--6-12">
+        <h1 style={style}>6-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--4-12">
+        <h1 style={style}>4-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--4-12">
+        <h1 style={style}>4-12</h1>
+      </div>
+      <div className="z-grid__col z-grid__col--4-12">
+        <h1 style={style}>4-12</h1>
+      </div>
+    </div>
+  ));
+
+storiesOf('CSS component', module)
+  .add('double gutters', () => (
+    <div className="z-grid z-grid--double-gutter">
       <div className="z-grid__col z-grid__col--12-12">
         <h1 style={style}>12-12</h1>
       </div>
@@ -255,8 +279,80 @@ storiesOf('Stateless functional component', module)
   ));
 
 storiesOf('Stateless functional component', module)
+  .add('half gutters', () => (
+    <Grid gutter="half">
+      <Column fill={12}>
+        <h1 style={style}>12-12</h1>
+      </Column>
+      <Column fill={6}>
+        <h1 style={style}>6-12</h1>
+      </Column>
+      <Column fill={6}>
+        <h1 style={style}>6-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+    </Grid>
+  ));
+
+storiesOf('Stateless functional component', module)
   .add('gutters', () => (
     <Grid gutter>
+      <Column fill={12}>
+        <h1 style={style}>12-12</h1>
+      </Column>
+      <Column fill={6}>
+        <h1 style={style}>6-12</h1>
+      </Column>
+      <Column fill={6}>
+        <h1 style={style}>6-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+    </Grid>
+  ));
+
+storiesOf('Stateless functional component', module)
+  .add('larger gutters', () => (
+    <Grid gutter="larger">
+      <Column fill={12}>
+        <h1 style={style}>12-12</h1>
+      </Column>
+      <Column fill={6}>
+        <h1 style={style}>6-12</h1>
+      </Column>
+      <Column fill={6}>
+        <h1 style={style}>6-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+      <Column fill={4}>
+        <h1 style={style}>4-12</h1>
+      </Column>
+    </Grid>
+  ));
+
+storiesOf('Stateless functional component', module)
+  .add('double gutters', () => (
+    <Grid gutter="double">
       <Column fill={12}>
         <h1 style={style}>12-12</h1>
       </Column>
