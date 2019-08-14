@@ -118,6 +118,83 @@ test('SFC component - fit', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
+test('SFC component - fit sm', (t) => {
+  t.plan(1);
+  const msg = 'should render a column that fits on small screens';
+  const expected = true;
+  return Nightmare()
+    .viewport(568, 480)
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--fit-sizes')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const grid = document.querySelector('.z-grid');
+      const gridWidth = parseInt(getComputedStyle(grid).width, 10);
+      const expectedWidth = Math.floor((gridWidth / 12) * 9);
+      const column = document.querySelector('.z-grid__col:nth-child(1)');
+      const columnWidth = parseInt(getComputedStyle(column).width, 10);
+      return expectedWidth === columnWidth;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('SFC component - fit md', (t) => {
+  t.plan(1);
+  const msg = 'should render a column that fits on medium screens';
+  const expected = true;
+  return Nightmare()
+    .viewport(768, 480)
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--fit-sizes')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const fitColumn = document.querySelector('.z-grid__col:nth-child(1)');
+      const column = document.querySelector('.z-grid__col:nth-child(2)');
+      const columnWidth = parseInt(getComputedStyle(column).width, 10);
+      const expectedWidth = parseInt(getComputedStyle(fitColumn).width, 10);
+      return expectedWidth === columnWidth;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('SFC component - fit lg', (t) => {
+  t.plan(1);
+  const msg = 'should render a column that fits on large screens';
+  const expected = true;
+  return Nightmare()
+    .viewport(1024, 480)
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--fit-sizes')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const fitColumn = document.querySelector('.z-grid__col:nth-child(2)');
+      const column = document.querySelector('.z-grid__col:nth-child(3)');
+      const columnWidth = parseInt(getComputedStyle(column).width, 10);
+      const expectedWidth = parseInt(getComputedStyle(fitColumn).width, 10);
+      return expectedWidth === columnWidth;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('SFC component - fit xl', (t) => {
+  t.plan(1);
+  const msg = 'should render a column that fits on extra large screens';
+  const expected = true;
+  return Nightmare()
+    .viewport(1280, 480)
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--fit-sizes')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const fitColumn = document.querySelector('.z-grid__col:nth-child(3)');
+      const column = document.querySelector('.z-grid__col:nth-child(4)');
+      const columnWidth = parseInt(getComputedStyle(column).width, 10);
+      const expectedWidth = parseInt(getComputedStyle(fitColumn).width, 10);
+      return expectedWidth === columnWidth;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
 test('SFC component - important column example', (t) => {
   t.plan(1);
   const msg = 'should render important columns first';
