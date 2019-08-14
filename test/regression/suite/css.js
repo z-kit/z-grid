@@ -247,3 +247,86 @@ test('CSS component - resizing example', (t) => {
     .then(actual => t.deepEqual(0, actual, msg));
   return Promise.all([before, after]);
 });
+
+test('CSS component - invisible column', (t) => {
+  const msg = 'should not display invisible columns';
+  const expected = 0;
+  return Nightmare()
+    .viewport(640, 480)
+    .goto('http://localhost:6006/iframe.html?id=css-component--invisible-column')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const columnRect = document.querySelector('.z-grid__col--invisible').getBoundingClientRect();
+      return columnRect.width + columnRect.height + columnRect.x + columnRect.y;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('CSS component - invisible sm', (t) => {
+  const msg = 'should not display a column on small screens';
+  const expected = 0;
+  return Nightmare()
+    .viewport(318, 480)
+    .goto('http://localhost:6006/iframe.html?id=css-component--invisibles')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const columnRect = document
+        .querySelector('.z-grid__col:nth-child(1)')
+        .getBoundingClientRect();
+      return columnRect.width + columnRect.height + columnRect.x + columnRect.y;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('CSS component - invisible md', (t) => {
+  const msg = 'should not display a column on medium screens';
+  const expected = 0;
+  return Nightmare()
+    .viewport(568, 480)
+    .goto('http://localhost:6006/iframe.html?id=css-component--invisibles')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const columnRect = document
+        .querySelector('.z-grid__col:nth-child(2)')
+        .getBoundingClientRect();
+      return columnRect.width + columnRect.height + columnRect.x + columnRect.y;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('CSS component - invisible lg', (t) => {
+  const msg = 'should not display a column on large screens';
+  const expected = 0;
+  return Nightmare()
+    .viewport(768, 480)
+    .goto('http://localhost:6006/iframe.html?id=css-component--invisibles')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const columnRect = document
+        .querySelector('.z-grid__col:nth-child(3)')
+        .getBoundingClientRect();
+      return columnRect.width + columnRect.height + columnRect.x + columnRect.y;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('CSS component - invisible xl', (t) => {
+  const msg = 'should not display a column on extra large screens';
+  const expected = 0;
+  return Nightmare()
+    .viewport(1024, 480)
+    .goto('http://localhost:6006/iframe.html?id=css-component--invisibles')
+    .wait('.z-grid')
+    .evaluate(() => {
+      const columnRect = document
+        .querySelector('.z-grid__col:nth-child(4)')
+        .getBoundingClientRect();
+      return columnRect.width + columnRect.height + columnRect.x + columnRect.y;
+    })
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
