@@ -6,7 +6,7 @@ test('SFC component - default', (t) => {
   const msg = 'should render column content';
   const expected = '12-12';
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=default')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--default')
     .wait('.z-grid')
     .evaluate(() => document.querySelector('.z-grid__col--12-12 > h1').textContent)
     .end()
@@ -18,7 +18,7 @@ test('SFC component - gutters', (t) => {
   const msg = 'should render column gutters';
   const expected = -8;
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=gutters')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--gutters')
     .wait('.z-grid')
     .evaluate(() => document.querySelector('.z-grid').getBoundingClientRect().left)
     .end()
@@ -30,7 +30,7 @@ test('SFC component - reverse grid', (t) => {
   const msg = 'should render a reverse grid column';
   const expected = true;
   return Nightmare()
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=reverse%20grid')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--reverse-grid')
     .wait('.z-grid')
     .evaluate(() => {
       const gridRight = document.querySelector('.z-grid').getBoundingClientRect().right;
@@ -47,7 +47,7 @@ test('SFC component - center grid', (t) => {
   const expected = true;
   return Nightmare()
     .viewport(640, 480)
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=center%20grid')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--center-grid')
     .wait('.z-grid')
     .evaluate(() => {
       const grid = document.querySelector('.z-grid');
@@ -68,7 +68,7 @@ test('SFC component - fit', (t) => {
   const expected = true;
   return Nightmare()
     .viewport(640, 480)
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=fit')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--fit')
     .wait('.z-grid')
     .evaluate(() => {
       const grid = document.querySelector('.z-grid');
@@ -88,7 +88,7 @@ test('SFC component - important column example', (t) => {
   const expected = 0;
   return Nightmare()
     .viewport(640, 480)
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=important%20column%20example')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--important-column-example')
     .wait('.z-grid')
     .evaluate(() => {
       document.body.style.margin = '0';
@@ -106,7 +106,7 @@ test('SFC component - resizing example', (t) => {
   const msg = 'should handle viewport resizing';
   const before = Nightmare()
     .viewport(640, 768)
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=resizing%20example')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--resizing-example')
     .wait('.z-grid')
     .evaluate(() => {
       const grid = document.querySelector('.z-grid');
@@ -121,7 +121,7 @@ test('SFC component - resizing example', (t) => {
     .then(actual => t.deepEqual(true, actual, msg));
   const after = Nightmare()
     .viewport(400, 768)
-    .goto('http://localhost:6006/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=resizing%20example')
+    .goto('http://localhost:6006/iframe.html?id=stateless-functional-component--resizing-example')
     .wait('.z-grid')
     .evaluate(() => {
       document.body.style.margin = '0';
