@@ -13,12 +13,48 @@ test('CSS component - default', (t) => {
     .then(actual => t.deepEqual(expected, actual, msg));
 });
 
+test('CSS component - half gutters', (t) => {
+  t.plan(1);
+  const msg = 'should render column gutters with half the size';
+  const expected = 0;
+  return Nightmare()
+    .goto('http://localhost:6006/iframe.html?id=css-component--half-gutters')
+    .wait('.z-grid')
+    .evaluate(() => document.querySelector('.z-grid').getBoundingClientRect().left)
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
 test('CSS component - gutters', (t) => {
   t.plan(1);
   const msg = 'should render column gutters';
   const expected = -8;
   return Nightmare()
     .goto('http://localhost:6006/iframe.html?id=css-component--gutters')
+    .wait('.z-grid')
+    .evaluate(() => document.querySelector('.z-grid').getBoundingClientRect().left)
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('CSS component - larger gutters', (t) => {
+  t.plan(1);
+  const msg = 'should render column gutters with 1.5x the size';
+  const expected = -16;
+  return Nightmare()
+    .goto('http://localhost:6006/iframe.html?id=css-component--larger-gutters')
+    .wait('.z-grid')
+    .evaluate(() => document.querySelector('.z-grid').getBoundingClientRect().left)
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
+
+test('CSS component - double gutters', (t) => {
+  t.plan(1);
+  const msg = 'should render column gutters with 2x the size';
+  const expected = -24;
+  return Nightmare()
+    .goto('http://localhost:6006/iframe.html?id=css-component--double-gutters')
     .wait('.z-grid')
     .evaluate(() => document.querySelector('.z-grid').getBoundingClientRect().left)
     .end()
