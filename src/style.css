@@ -52,7 +52,7 @@
   margin-bottom: calc(-1 * var(--gutter-size));
 }
 
-.z-grid--larger--gutter {
+.z-grid--larger-gutter {
   margin-left: calc(-1 * var(--gutter-size) * 1.5);
   margin-bottom: calc(-1 * var(--gutter-size) * 1.5);
 }
