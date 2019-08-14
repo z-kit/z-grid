@@ -4,6 +4,8 @@ node_js:
   - "8"
 services:
   - xvfb
+addons:
+  chrome: stable
 before_install:
  - export DISPLAY=:99.0
  - sleep 3
