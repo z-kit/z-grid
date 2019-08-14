@@ -210,16 +210,16 @@ storiesOf('CSS component', module)
   .add('fit sizes', () => (
     <div className="z-grid">
       <div className="z-grid__col z-grid__col--sm-fit">
-        <h1 style={style}>SM</h1>
+        <h1 style={style}>X</h1>
       </div>
       <div className="z-grid__col z-grid__col--md-fit">
-        <h1 style={style}>MD</h1>
+        <h1 style={style}>X</h1>
       </div>
       <div className="z-grid__col z-grid__col--lg-fit">
-        <h1 style={style}>LG</h1>
+        <h1 style={style}>X</h1>
       </div>
       <div className="z-grid__col z-grid__col--xl-fit">
-        <h1 style={style}>XL</h1>
+        <h1 style={style}>X</h1>
       </div>
     </div>
   ));
@@ -450,16 +450,16 @@ storiesOf('Stateless functional component', module)
   .add('fit sizes', () => (
     <Grid>
       <Column fit="sm">
-        <h1 style={style}>SM</h1>
+        <h1 style={style}>X</h1>
       </Column>
       <Column fit="md">
-        <h1 style={style}>MD</h1>
+        <h1 style={style}>X</h1>
       </Column>
       <Column fit="lg">
-        <h1 style={style}>LG</h1>
+        <h1 style={style}>X</h1>
       </Column>
       <Column fit="xl">
-        <h1 style={style}>XL</h1>
+        <h1 style={style}>X</h1>
       </Column>
     </Grid>
   ));
