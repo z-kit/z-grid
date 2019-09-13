@@ -192,7 +192,7 @@
     "stylelint-scss": "^3.9.3",
     "stylelint-selector-bem-pattern": "^2.1.0",
     "wait-on": "^3.3.0",
-    "webpack": "^4.39.1",
+    "webpack": "^4.40.1",
     "webpack-cli": "^3.3.6",
     "webpack-node-externals": "^1.7.2"
   }
