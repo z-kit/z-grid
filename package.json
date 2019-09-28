@@ -183,7 +183,7 @@
     "postcss-custom-properties": "^9.0.2",
     "postcss-for": "^2.1.1",
     "postcss-loader": "^3.0.0",
-    "react": "^16.9.0",
+    "react": "^16.10.1",
     "react-dom": "^16.9.0",
     "rimraf": "^2.6.3",
     "style-loader": "^1.0.0",
