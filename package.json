@@ -153,7 +153,7 @@
     "@storybook/addons": "^v5.1.10",
     "@storybook/react": "^v5.1.10",
     "acorn": "^6.3.0",
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.6.5",
     "ava": "^2.2.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
