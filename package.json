@@ -185,7 +185,7 @@
     "postcss-loader": "^3.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.0",
     "style-loader": "^1.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
