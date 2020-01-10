@@ -155,21 +155,26 @@
 
 @media all and (max-width: 64rem) {
   .z-grid__col--xl-invisible { display: none; }
+  .z-grid__col--xl-auto { flex-basis: auto; }
 }
 
 @media all and (max-width: 48rem) {
   .z-grid__col--lg-invisible { display: none; }
+  .z-grid__col--lg-auto { flex-basis: auto; }
 }
 
 @media all and (max-width: 35.5rem) {
   .z-grid__col--md-invisible { display: none; }
+  .z-grid__col--md-auto { flex-basis: auto; }
 }
 
 @media all and (max-width: 19.9rem) {
   .z-grid__col--sm-invisible { display: none; }
+  .z-grid__col--sm-auto { flex-basis: auto; }
 }
 
 /* Extra column modifiers */
 .z-grid__col--center { align-self: center; }
 .z-grid__col--end { align-self: flex-end; }
 .z-grid__col--important { order: -1; }
+.z-grid__col--auto { flex-basis: auto; }

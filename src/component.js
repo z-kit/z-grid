@@ -37,6 +37,13 @@ const classes = {
     lg: styles['z-grid__col--lg-invisible'] || 'z-grid__col--lg-invisible',
     xl: styles['z-grid__col--xl-invisible'] || 'z-grid__col--xl-invisible',
   },
+  auto: {
+    auto: styles['z-grid__col--auto'] || 'z-grid__col--auto',
+    sm: styles['z-grid__col--sm-auto'] || 'z-grid__col--sm-auto',
+    md: styles['z-grid__col--md-auto'] || 'z-grid__col--md-auto',
+    lg: styles['z-grid__col--lg-auto'] || 'z-grid__col--lg-auto',
+    xl: styles['z-grid__col--xl-auto'] || 'z-grid__col--xl-auto',
+  },
   columnCenter: styles['z-grid__col--center'] || 'z-grid__col--center',
   columnEnd: styles['z-grid__col--end'] || 'z-grid__col--end',
   columnImportant: styles['z-grid__col--important'] || 'z-grid__col--important',
@@ -90,6 +97,8 @@ export function ZColumn(e) {
     if (typeof props.fit === 'string') modifiers.push(classes.fit[props.fit]);
     if (props.invisible === true) modifiers.push(classes.invisibles.invisible);
     if (typeof props.invisible === 'string') modifiers.push(classes.invisibles[props.invisible]);
+    if (props.auto === true) modifiers.push(classes.auto.auto);
+    if (typeof props.auto === 'string') modifiers.push(classes.auto[props.auto]);
     if (props.center) modifiers.push(classes.columnCenter);
     if (props.end) modifiers.push(classes.columnEnd);
     if (props.important) modifiers.push(classes.columnImportant);
