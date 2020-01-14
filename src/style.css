@@ -112,6 +112,11 @@
     }
   }
   .z-grid__col--sm-fit { flex-grow: 1; }
+  .z-grid__col--sm-auto {
+    flex-basis: auto;
+    width: auto;
+    max-width: auto;
+  }
 }
 
 /* 768px when root font-size is 16px */
@@ -124,6 +129,11 @@
     }
   }
   .z-grid__col--md-fit { flex-grow: 1; }
+  .z-grid__col--md-auto {
+    flex-basis: auto;
+    width: auto;
+    max-width: auto;
+  }
 }
 
 /* 1024px when root font-size is 16px */
@@ -136,6 +146,11 @@
     }
   }
   .z-grid__col--lg-fit { flex-grow: 1; }
+  .z-grid__col--lg-auto {
+    flex-basis: auto;
+    width: auto;
+    max-width: auto;
+  }
 }
 
 /* 1280px when root font-size is 16px */
@@ -148,6 +163,11 @@
     }
   }
   .z-grid__col--xl-fit { flex-grow: 1; }
+  .z-grid__col--xl-auto {
+    flex-basis: auto;
+    width: auto;
+    max-width: auto;
+  }
 }
 
 /* Invisibles */
@@ -155,26 +175,27 @@
 
 @media all and (max-width: 64rem) {
   .z-grid__col--xl-invisible { display: none; }
-  .z-grid__col--xl-auto { flex-basis: auto; }
 }
 
 @media all and (max-width: 48rem) {
   .z-grid__col--lg-invisible { display: none; }
-  .z-grid__col--lg-auto { flex-basis: auto; }
 }
 
 @media all and (max-width: 35.5rem) {
   .z-grid__col--md-invisible { display: none; }
-  .z-grid__col--md-auto { flex-basis: auto; }
 }
 
 @media all and (max-width: 19.9rem) {
   .z-grid__col--sm-invisible { display: none; }
-  .z-grid__col--sm-auto { flex-basis: auto; }
 }
 
 /* Extra column modifiers */
 .z-grid__col--center { align-self: center; }
 .z-grid__col--end { align-self: flex-end; }
 .z-grid__col--important { order: -1; }
-.z-grid__col--auto { flex-basis: auto; }
+/* Auto */
+.z-grid__col--auto {
+  flex-basis: auto;
+  width: auto;
+  max-width: auto;
+}
