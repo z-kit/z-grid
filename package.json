@@ -151,7 +151,7 @@
     "@babel/register": "^7.7.7",
     "@babel/runtime": "^7.7.7",
     "@storybook/addons": "^5.3.5",
-    "@storybook/react": "^v5.2.8",
+    "@storybook/react": "^5.3.5",
     "acorn": "^7.1.0",
     "autoprefixer": "^9.7.3",
     "ava": "^2.4.0",
