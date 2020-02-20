@@ -180,7 +180,7 @@
     "null-loader": "^3.0.0",
     "postcss-at-rules-variables": "^0.1.10",
     "postcss-calc": "^7.0.1",
-    "postcss-custom-properties": "^9.0.2",
+    "postcss-custom-properties": "^9.1.1",
     "postcss-for": "^2.1.1",
     "postcss-loader": "^3.0.0",
     "react": "^16.12.0",
