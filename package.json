@@ -148,7 +148,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
-    "@babel/register": "^7.7.7",
+    "@babel/register": "^7.9.0",
     "@babel/runtime": "^7.7.7",
     "@storybook/addons": "^v5.2.8",
     "@storybook/react": "^v5.2.8",
