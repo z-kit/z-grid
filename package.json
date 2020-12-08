@@ -2,7 +2,7 @@
   "name": "z-grid",
   "version": "3.2.3",
   "description": "A 12-column grid system for your web application",
-  "main": "dist/index.js",
+  "main": "dist/module.js",
   "minified:main": "dist/index.min.js",
   "jsnext:main": "dist/module.js",
   "module": "dist/module.js",
