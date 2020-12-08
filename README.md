@@ -31,7 +31,7 @@ npm install z-grid --save
 The package will be located inside the `node_modules` folder, you can import it into the HTML document as follows:
 
 ```html
-<link rel="stylesheet" href="node_modules/z-grid/dist/style.css">
+<link rel="stylesheet" href="node_modules/z-grid/dist/style.module.css">
 ```
 
 ### When bundling an web app
@@ -39,7 +39,7 @@ The package will be located inside the `node_modules` folder, you can import it 
 **For bundlers that support CSS, like [Webpack](https://webpack.github.io/), you can use it like this:**
 
 ```javascript
-require('z-grid/dist/style.css');
+require('z-grid/dist/style.module.css');
 ```
 
 ### <a name="import-sfc"></a> Import as a Stateless Functional Component (SFC)

@@ -45,7 +45,7 @@ There is a caveat: to load the CSS styling you must use a bundler that supports 
 
 The developer working in the source code should look for the `src` folder:
 
-- The `style.css` file contains all the CSS styling that one need to render the component.
+- The `style.module.css` file contains all the CSS styling that one need to render the component.
 - The `component.js` file exports the SFC.
 - The `webcomponent` subdirectory contains code that ultimately represent the Web Component.
 

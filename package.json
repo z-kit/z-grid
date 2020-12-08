@@ -15,7 +15,7 @@
     "build": "run-p package min-package build:module",
     "clean": "rimraf dist",
     "create-output-dir": "mkdirp dist",
-    "lint:css": "stylelint src/style.css",
+    "lint:css": "stylelint src/style.module.css",
     "lint:js": "eslint webpack.config.babel.js .storybook src stories test/regression test/unit/suite",
     "lint": "run-p lint:js lint:css",
     "min-package": "cross-env MIN=true webpack -p",
