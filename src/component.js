@@ -4,7 +4,7 @@
  * https://github.com/z-kit/z-grid
  */
 
-import styles from './style.css';
+import styles from './style.module.css';
 
 const NUMBER_OF_COLUMNS = 12;
 
