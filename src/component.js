@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019 z-kit contributors.
+ * Copyright (c) 2020 z-kit contributors.
  * @license MIT LICENSE
  * https://github.com/z-kit/z-grid
  */
