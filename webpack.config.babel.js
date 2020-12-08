@@ -35,6 +35,6 @@ export default {
     extensions: ['.js', '.css'],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: 'style.css' }),
+    new MiniCssExtractPlugin({ filename: 'style.module.css' }),
   ],
 };
